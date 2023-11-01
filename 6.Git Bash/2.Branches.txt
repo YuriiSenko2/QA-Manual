@@ -1,0 +1,26 @@
+1) git checkout -b welcome_to_branch - create and navigate to the branch
+
+2) git push -u origin welcome_to_branch - link the new branch to the main one
+
+3) echo "I'm from another branch" >> ~/Bash/just-repository/for_portfolio/qa.txt - add a line to the file in the main branch
+
+4) git diff - check if the line was added 
+
+5) git commit -am "new branch" - commit changes in the new branch
+
+6) git push - add the new branch to the remote repository
+
+7) git checkout main - navigate back to the main branch
+
+8) git merge welcome_to_branch - merge the new branch with the main one
+
+9) git push - merge changes between two branches
+
+10) git push origin :welcome_to_branch
+     git push -u origin needless_branch - rename the branch
+
+11) git branch -d needless_branch - remove the branch from the local repository
+
+12)git fetch origin needless_branch - restore the removed branch in the local repository 
+
+13) git push origin -d needless_branch - delete the branch in the remote repository

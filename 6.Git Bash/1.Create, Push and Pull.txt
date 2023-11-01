@@ -1,0 +1,34 @@
+1) git clone https://github.com/YuriiSenko1/just-repository.git - clone the remote repository
+
+2) cd ~/Bash/just-repository - navigate to the local repository 
+
+3) mkdir for_portfolio - create a directory
+
+4) touch qa.txt qc.txt - create two files
+
+5) mv qa.txt qc.txt for_portfolio - move two files to a directory
+
+6) cd  ~/Bash/just-repository/for_portfolio - navigate to the directory with files
+
+7) nano qa.txt - add information to the file with the "nano" editor
+
+8) nano qc.txt - add information to the file with the "nano" editor
+
+9) cat qa.txt qc.txt - check the content of edited files
+
+10) cd - - navigate back to the repository
+
+11) git status - verify the state of the repository
+
+12) git add for_portfolio - track the directory
+
+13) git commit -m "files to read" - commit changes in the local repository 
+
+14) git push - add the directory to the remote repository
+
+15) change the content of the file manually in the remote repository
+      git fetch - check if anything was changed in the remote repository
+
+16) git pull - add changes to the local repository
+
+17) cat  ~/Bash/just-repository/for_portfolio/qa.txt - ensure that the file was changed in the local repository as well
