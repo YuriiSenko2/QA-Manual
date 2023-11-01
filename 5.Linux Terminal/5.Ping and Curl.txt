@@ -1,0 +1,14 @@
+1) ping www.spotify.com - ping the host
+   ctrl+c - stop the ping process
+
+2) ping -c 5 -i 4 www.spotify.com - retrieve 5 ping pockets at intervals of 4 seconds 
+
+3) curl -L www.spotify.com - transmit data from the host
+
+4) curl -L www.spotify.com --verbos - transmit additional data from the host
+
+5) curl https://qauto2.forstudy.space/api/cars/brands - get car brands available in the web app
+
+6) curl -X POST https://qauto2.forstudy.space/api/auth/signin --data "email=senko.testing@gmail.com" 
+    --data "password=Congrats12345" --data "remember=false"
+    sign in to the account

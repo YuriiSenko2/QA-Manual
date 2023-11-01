@@ -1,0 +1,21 @@
+1) cd ~/Desktop - navigate to the Desktop directory
+
+2) touch emails.txt emails.docx - create two files
+
+3) find -name "*.txt" - find a file in txt format
+
+4) pico emails.txt - edit the file with the editor Pico
+
+5) less emails.txt - check the content of the file
+
+6) sort emails.txt > sorted_emails.txt - create the new sorted file
+
+7) more sorted_emails.txt - check the content of the file
+
+8) rm emails.txt - remove the unsorted file
+
+9) grep -E "yahoo.com" sorted_emails.txt - find emails with the Yahoo domain
+
+10) grep -E "yahoo.com|outlook.com" sorted_emails.txt - find emails with the Yahoo and Outlook domains
+
+11) grep -i larry sorted_emails.txt - cancel the case sensitivity and find emails that contain the name Larry

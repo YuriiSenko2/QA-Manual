@@ -1,0 +1,25 @@
+1) mkdir ~/Desktop/applicants - create a folder
+
+2) cd ~/Desktop - navigate to the Desktop directory
+
+3) mv applicants Applicants  - rename the folder
+
+4) touch ~/Desktop/Applicants/tasks.txt - create a file in the folder
+
+5) echo Store this info >> ~/Desktop/Applicants/tasks.txt -add a line to the file 
+
+6) cat ~/Desktop/Applicants/tasks.txt - check the content of the file
+
+7) mv Applicants ~/Documents - move the folder to the Documents directory
+
+8) cd ~/Documents/Applicants - navigate to the folder
+
+9) ln -s ~/Documents/Applicants ApplicantsLink - create a link to the folder
+
+10) mv ApplicantsLink ~/Desktop - move the link to the Desktop directory
+
+11) cd ~/Documents/Applicants - navigate to the folder
+
+12) ln tasks.txt tasks_backup.txt - create the backup file
+
+13) ls - ensure that the backup file was created

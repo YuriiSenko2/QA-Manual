@@ -1,0 +1,37 @@
+1) ls -l /home - view current users
+
+2) sudo useradd -m new_employee - create a new user with the directory
+
+3) ls -l /home - ensure that the user was created
+
+4) sudo passwd new_employee - set a password for the user
+
+5) cd etc/skel - navigate to the skeleton directory
+
+6) sudo touch probation.txt - create a file for the user
+
+7) ls -l /home/new_employee - ensure that the file was created
+
+8) cd - navigate to the home directory
+
+9) sudo groupadd QA_Engineers - create a new group
+
+10) cat /etc/group - ensure that the group was created
+
+11) sudo usermod -aG QA_Engineers new_employee - add the user to the group
+
+12) id another_one - ensure that the user was added to the group
+
+13) ls -l - view current users, groups, and directory/files permission categories
+
+14) sudo chown new_employee emails.txt - appoint the user as the file owner 
+
+15) sudo chgrp QA_Engineers emails.txt - change the group of the file
+
+16) sudo chmod o-r emails.txt - prevent other users from reading the file
+
+17) sudo chmod g+x,u+x emails.txt - allow owner and group to execute the file
+
+18) sudo chmod ugo=r emails.txt - allow everyone to read the file
+
+19) sudo chmod 660 emails.txt - allow owner and group to read and write but not execute and deprive other users of any permissions on the file

@@ -1,0 +1,23 @@
+1)gzip method
+tar czf arch.gz Applicants - archive and compress files of the folder
+ls -l - check the size of the archive (213 bytes)
+gunzip arch.gz - unzip the archive
+rm arch.gz - remove the archive
+
+2)bzip method
+tar cjf arch.bz Applicants - archive and compress files of the folder
+ls -l - check the size of the archive (226 bytes)
+bunzip2 arch.bz - unzip the archive
+rm arch.bz - remove the archive
+
+3)gzip method
+tar cJf arch.xz Applicants - archive and compress files of the folder
+ls -l - check the size of the archive (248 bytes)
+unxz arch.xz - unzip the archive
+rm arch.xz - remove the archive
+
+4)zip method
+zip -r arch.zip Applicants - archive and compress files of the folder
+ls -l - check the size of the archive (544 bytes)
+unzip arch.zip - unzip the archive
+rm arch.zip - remove the archive
