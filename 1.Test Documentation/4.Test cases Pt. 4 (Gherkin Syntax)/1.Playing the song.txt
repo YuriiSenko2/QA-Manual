@@ -1,0 +1,19 @@
+# Environment: Android 5 or higher
+
+Feature. Tap combinations (Samsung Galaxy Buds Pro earbuds)
+
+Example. Playing the audio.
+ 
+Given. At least 30 % charged Samsung Galaxy Buds Pro earbuds
+And at least 30 % charged smartphone
+And the music player is installed on the smartphone
+And the mp3 audio file is downloaded on the smartphone
+And earbuds are connected to the smartphone via Bluetooth
+And earbuds are held in the ears
+
+When the music player is opened
+And the mp3 audio file is played
+And the mp3 audio file is stopped
+And the sensor panel of one of the earbuds is tapped
+
+Then the mp3 audio file is played
