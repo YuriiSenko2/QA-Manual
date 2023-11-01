@@ -1,0 +1,48 @@
+1) The primary aims of this collection requests are to:
+  
+  a) retrieve user profile data 
+  b) retrieve user data settings
+  c) modify user profile data 
+  d) modify user data settings
+  e) modify user-sensitive data
+  f) delete the user
+
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+  c) Put
+  d) Delete
+
+3) Test Cases:
+  
+  a) Positive
+  b) Negative
+
+4) Test Run:
+  
+  a) Passed - 29
+  b) Failed - 2*
+
+- Failed tests:
+
+1. Authenticated user profile data (f). (Test for a profile picture)
+
+  The test failed since the "edition of the profile picture (*)" request didn't change default profile picture despite the 200 status code. 
+  Occurs with any format, name, and size of the image.
+
+  Actual result: string "photoFilename" fails to include "car.png" (includes "default-user.png" instead)
+
+  Expected result: string "photoFilename" includes "car.png"
+
+2. Modification of the user's email (f).
+
+  Any new email is determined as already existing.
+  
+  Actual result: status code is 400
+  Message: "Email already exists"
+  
+  Expected result: email is changed
+
+*Edition of the last name - the request is successful, and the "Authenticated user profile data" request confirms
+ that the last name of the user was modified, but nothing changed in the web application.

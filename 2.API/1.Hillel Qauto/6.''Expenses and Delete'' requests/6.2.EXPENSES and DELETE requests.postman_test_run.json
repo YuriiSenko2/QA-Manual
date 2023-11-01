@@ -1,0 +1,439 @@
+{
+	"id": "fcac2e7d-31a4-4f47-8f2c-1261ac1ae20e",
+	"name": "6.EXPENSES and DELETE requests",
+	"timestamp": "2023-07-04T15:10:10.276Z",
+	"collection_id": "23066141-6f02dec5-ed40-4152-a58b-dddb9e7a2c6f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 16,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "945ec522-1897-4053-8ac3-1deed656c8a6",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 766,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				766
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "05a3fd93-df9d-447d-a758-5484acdcb163",
+			"name": "Get the expense by expense id",
+			"url": "https://qauto2.forstudy.space/api/expenses/9708",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "fcb1a6f1-64b7-470c-b583-172855454f6f",
+			"name": "Edition of the expense",
+			"url": "https://qauto2.forstudy.space/api/expenses/9708",
+			"time": 105,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				105
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e56d94a7-b6be-46d8-983a-a61b342b526b",
+			"name": "Get the expense by expense id",
+			"url": "https://qauto2.forstudy.space/api/expenses/9708",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The mileage is": true,
+				"The number of litres is": true,
+				"The total cost is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The mileage is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The number of litres is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The total cost is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The mileage is": true,
+					"The number of litres is": true,
+					"The total cost is": true
+				}
+			]
+		},
+		{
+			"id": "40e9830e-4e32-4162-b58a-f0ee1a1bcabf",
+			"name": "Removal of the expense",
+			"url": "https://qauto2.forstudy.space/api/expenses/9708",
+			"time": 83,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				83
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "c727bd61-47f7-444a-8502-108330709981",
+			"name": "Edition of the deleted expense",
+			"url": "https://qauto2.forstudy.space/api/expenses/9708",
+			"time": 82,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "0eb406fb-9f43-43f8-bb92-be0238f7bc51",
+			"name": "Deletion of the existing car",
+			"url": "https://qauto2.forstudy.space/api/cars/24431",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6d56a4ea-dcb6-40db-a7ec-867bb8104481",
+			"name": "Edition of the deleted car",
+			"url": "https://qauto2.forstudy.space/api/cars/24431",
+			"time": 84,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "97121bd7-9095-475e-9445-dd713e52a738",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ccdd09fa-390b-4621-8ae5-0c00ec7bcd94",
+			"name": "Deletion of the logged out user",
+			"url": "https://qauto2.forstudy.space/api/users",
+			"time": 74,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				74
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "6fdd9579-a307-408f-92d6-05329e7685a5",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 566,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				566
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f1c072ef-094c-4b61-8e7b-f88ae5e8d544",
+			"name": "Deletion of the user",
+			"url": "https://qauto2.forstudy.space/api/users",
+			"time": 86,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				86
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "f7d98cd4-0804-4abc-a3be-a543579b91d0",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 79,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2223,
+	"collection": {
+		"requests": [
+			{
+				"id": "945ec522-1897-4053-8ac3-1deed656c8a6",
+				"method": "POST"
+			},
+			{
+				"id": "05a3fd93-df9d-447d-a758-5484acdcb163",
+				"method": "GET"
+			},
+			{
+				"id": "fcb1a6f1-64b7-470c-b583-172855454f6f",
+				"method": "PUT"
+			},
+			{
+				"id": "e56d94a7-b6be-46d8-983a-a61b342b526b",
+				"method": "GET"
+			},
+			{
+				"id": "40e9830e-4e32-4162-b58a-f0ee1a1bcabf",
+				"method": "DELETE"
+			},
+			{
+				"id": "c727bd61-47f7-444a-8502-108330709981",
+				"method": "PUT"
+			},
+			{
+				"id": "0eb406fb-9f43-43f8-bb92-be0238f7bc51",
+				"method": "DELETE"
+			},
+			{
+				"id": "6d56a4ea-dcb6-40db-a7ec-867bb8104481",
+				"method": "PUT"
+			},
+			{
+				"id": "97121bd7-9095-475e-9445-dd713e52a738",
+				"method": "GET"
+			},
+			{
+				"id": "ccdd09fa-390b-4621-8ae5-0c00ec7bcd94",
+				"method": "DELETE"
+			},
+			{
+				"id": "6fdd9579-a307-408f-92d6-05329e7685a5",
+				"method": "POST"
+			},
+			{
+				"id": "f1c072ef-094c-4b61-8e7b-f88ae5e8d544",
+				"method": "DELETE"
+			},
+			{
+				"id": "f7d98cd4-0804-4abc-a3be-a543579b91d0",
+				"method": "POST"
+			}
+		]
+	}
+}

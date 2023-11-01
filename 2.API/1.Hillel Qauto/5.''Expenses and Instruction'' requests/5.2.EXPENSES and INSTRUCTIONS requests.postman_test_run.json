@@ -1,0 +1,252 @@
+{
+	"id": "6cac6bed-e323-4a8b-bcac-b752c478cf9d",
+	"name": "5.EXPENSES and INSTRUCTIONS requests",
+	"timestamp": "2023-07-04T13:54:08.563Z",
+	"collection_id": "23066141-492d3d6a-d227-4f67-86f6-5d151a22b2ee",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "aee9746d-1577-4d9f-b176-d1bf6898f7a0",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 726,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				726
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "25a3c53d-4c9b-44a8-b65e-7dab703ae4b1",
+			"name": "Creation of an expense",
+			"url": "https://qauto2.forstudy.space/api/expenses",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "421395cd-05a5-49d9-972c-b7fd3e9c4723",
+			"name": "Get all expenses by user car id",
+			"url": "https://qauto2.forstudy.space/api/expenses?carId=24431&page=1",
+			"time": 107,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The mileage is": true,
+				"The number of litres is": true,
+				"The total cost is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The mileage is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The number of litres is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The total cost is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				107
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The mileage is": true,
+					"The number of litres is": true,
+					"The total cost is": true
+				}
+			]
+		},
+		{
+			"id": "4e82857f-8fe3-4121-81a1-f98dd38798c5",
+			"name": "Get all instructions by car brand and car model id",
+			"url": "https://qauto2.forstudy.space/api/instructions?carBrandId=3&carModelId=14&page=1",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Description for filter": true,
+				"Description for filter and oil": true,
+				"Description for brake discs": true,
+				"Description for brake pads": true,
+				"Description for coil springs": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description for filter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description for filter and oil": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description for brake discs": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description for brake pads": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Description for coil springs": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Description for filter": true,
+					"Description for filter and oil": true,
+					"Description for brake discs": true,
+					"Description for brake pads": true,
+					"Description for coil springs": true
+				}
+			]
+		},
+		{
+			"id": "6c8743b7-9d52-419b-bf28-f9c0eae3042b",
+			"name": "Creation of an expense (wrong date)",
+			"url": "https://qauto2.forstudy.space/api/api/expenses",
+			"time": 81,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "4ef0a524-ed1c-4b34-aa37-d61596d6027a",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 73,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1185,
+	"collection": {
+		"requests": [
+			{
+				"id": "aee9746d-1577-4d9f-b176-d1bf6898f7a0",
+				"method": "POST"
+			},
+			{
+				"id": "25a3c53d-4c9b-44a8-b65e-7dab703ae4b1",
+				"method": "POST"
+			},
+			{
+				"id": "421395cd-05a5-49d9-972c-b7fd3e9c4723",
+				"method": "GET"
+			},
+			{
+				"id": "4e82857f-8fe3-4121-81a1-f98dd38798c5",
+				"method": "GET"
+			},
+			{
+				"id": "6c8743b7-9d52-419b-bf28-f9c0eae3042b",
+				"method": "POST"
+			},
+			{
+				"id": "4ef0a524-ed1c-4b34-aa37-d61596d6027a",
+				"method": "GET"
+			}
+		]
+	}
+}

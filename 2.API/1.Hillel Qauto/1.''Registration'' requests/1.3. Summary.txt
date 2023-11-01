@@ -1,0 +1,24 @@
+1) The primary aims of this collection requests are to:
+  
+  a) register a new user in the web application
+  b) sign in to the user account 
+  c) log out of the user account
+
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+
+3) Test Cases:
+  
+  a) Positive 
+  b) Negative 
+
+4) Test run:
+  
+  a) Passed - 8
+  b) Failed - 0* 
+
+*Registration - the request is successful, the "Sign up" request and the "Authenticated user profile data" request, 
+ as well as the respective tests, confirm that the user registered with all specified data, but the user's last name
+ is set as "undefined" in the web application.

@@ -1,0 +1,22 @@
+1) The primary aims of this collection requests are to:
+  
+  a) retrieve specific expense data by expense id
+  b) edit a specific expense
+  c) delete everything
+  
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+  c) Put
+  d) Delete
+
+3) Test Cases:
+  
+  a) Positive
+  b) Negative
+
+4) Test run:
+  
+  a) Passed - 16 
+  b) Failed - 0 

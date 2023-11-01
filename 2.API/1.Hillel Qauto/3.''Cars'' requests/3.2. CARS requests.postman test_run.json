@@ -1,0 +1,414 @@
+{
+	"id": "fd85d8c1-c250-4ab2-b819-3740765c5e66",
+	"name": "3.CARS requests",
+	"timestamp": "2023-07-04T11:59:29.528Z",
+	"collection_id": "23066141-909d6737-dd09-469a-aa4d-6c1995fb10db",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 16,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6277f20a-0680-4adb-b164-d915f81dcfeb",
+			"name": "Car brands",
+			"url": "https://qauto2.forstudy.space/api/cars/brands",
+			"time": 242,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				242
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d30190a0-6ccd-417a-985b-f569f43a0e60",
+			"name": "Car brand by brand id",
+			"url": "https://qauto2.forstudy.space/api/cars/brands/3",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Title is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Title is": true
+				}
+			]
+		},
+		{
+			"id": "5781c109-f2cf-4ffb-ad76-24543bd2966c",
+			"name": "Wrong brand id",
+			"url": "https://qauto2.forstudy.space/api/cars/brands/6",
+			"time": 79,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "0531462a-c3ca-44f6-9809-35e87b77f432",
+			"name": "Car models",
+			"url": "https://qauto2.forstudy.space/api/cars/models",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6c74d488-20a2-4e20-9ef0-546485920e48",
+			"name": "Car model by model id",
+			"url": "https://qauto2.forstudy.space/api/cars/models/14",
+			"time": 78,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Title is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Title is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Title is": true
+				}
+			]
+		},
+		{
+			"id": "c58d3d7c-5ecc-459a-8061-05743a0cdcd4",
+			"name": "Wrong car model id",
+			"url": "https://qauto2.forstudy.space/api/cars/models/24",
+			"time": 60,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				60
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "904c5d0a-44d9-4a41-afa0-d67820c6a633",
+			"name": "Registration of the new user",
+			"url": "https://qauto2.forstudy.space/api/auth/signup",
+			"time": 1046,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1046
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "3c145adb-c3b1-4edf-a334-24d67687f9ca",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 554,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				554
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "1f66bff3-5cae-425d-a5f8-cd51e870671d",
+			"name": "Creation of a new car",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 78,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				78
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "56aa788d-c41d-41b8-8599-a8ea86b4d017",
+			"name": "Creation of a new car (wrong model id)",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 81,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "d961dbd2-cf37-49ca-a540-c8be18fd9e29",
+			"name": "Current user cars",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 75,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Car brand is": true,
+				"Car model is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Car brand is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Car model is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Car brand is": true,
+					"Car model is": true
+				}
+			]
+		},
+		{
+			"id": "2b5d3e5b-71aa-4521-8ae1-987117a9a034",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 73,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				73
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2517,
+	"collection": {
+		"requests": [
+			{
+				"id": "6277f20a-0680-4adb-b164-d915f81dcfeb",
+				"method": "GET"
+			},
+			{
+				"id": "d30190a0-6ccd-417a-985b-f569f43a0e60",
+				"method": "GET"
+			},
+			{
+				"id": "5781c109-f2cf-4ffb-ad76-24543bd2966c",
+				"method": "GET"
+			},
+			{
+				"id": "0531462a-c3ca-44f6-9809-35e87b77f432",
+				"method": "GET"
+			},
+			{
+				"id": "6c74d488-20a2-4e20-9ef0-546485920e48",
+				"method": "GET"
+			},
+			{
+				"id": "c58d3d7c-5ecc-459a-8061-05743a0cdcd4",
+				"method": "GET"
+			},
+			{
+				"id": "904c5d0a-44d9-4a41-afa0-d67820c6a633",
+				"method": "POST"
+			},
+			{
+				"id": "3c145adb-c3b1-4edf-a334-24d67687f9ca",
+				"method": "POST"
+			},
+			{
+				"id": "1f66bff3-5cae-425d-a5f8-cd51e870671d",
+				"method": "POST"
+			},
+			{
+				"id": "56aa788d-c41d-41b8-8599-a8ea86b4d017",
+				"method": "POST"
+			},
+			{
+				"id": "d961dbd2-cf37-49ca-a540-c8be18fd9e29",
+				"method": "GET"
+			},
+			{
+				"id": "2b5d3e5b-71aa-4521-8ae1-987117a9a034",
+				"method": "GET"
+			}
+		]
+	}
+}

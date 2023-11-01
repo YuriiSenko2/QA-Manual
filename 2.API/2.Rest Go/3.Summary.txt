@@ -1,0 +1,26 @@
+The collection contains the following requests:
+
+ a) Create a user
+ b) Get all users
+ c) Get user details
+ d) Update user details
+ e) Get user details
+ f) Get all user posts
+ g) Get all posts
+ h) Get a specific post
+ i) Get post comment
+ j) Create a post comment
+ k) Get all comments
+ l) Get a single comment
+ m) Delete a comment
+ n) Delete a user
+
+Extras:
+
+ a) Add a URL as a variable to the collection
+ b) Add a bearerToken as a variable to the environment
+ c) Add the 'page' parameter for the 'Get all users' request
+ d) Add the 'name' parameter for the 'Get all users' request
+ e) Add a test for the 'Create a post comment' request: 
+    if response code = 201, then it's necessary to extract the ID and comment text from the response 
+    and add them to the environment as comment_id and comment_text respectively.

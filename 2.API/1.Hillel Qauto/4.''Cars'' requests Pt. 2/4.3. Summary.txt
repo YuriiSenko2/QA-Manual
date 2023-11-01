@@ -1,0 +1,20 @@
+1) The primary aims of this collection requests are to:
+  
+  a) retrieve car data that the user added to the garage by user car id
+  b) edit cars stored in the user's garage
+  
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+  c) Put
+
+3) Test Cases:
+  
+  a) Positive
+  b) Negative
+
+4) Test run:
+  
+  a) Passed - 13 
+  b) Failed - 0 

@@ -1,0 +1,23 @@
+1) The primary aims of this collection requests are to:
+  
+  a) retrieve a list of all car brands available in the web application
+  b) retrieve particular car brands data by car id
+  c) retrieve a list of all car models available in the web application
+  d) retrieve particular car models data by model id
+  e) create a new car in the user's garage
+  f) retrieve car data that the user added to the garage
+  
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+
+3) Test Cases:
+  
+  a) Positive
+  b) Negative
+
+4) Test run:
+  
+  a) Passed - 16 
+  b) Failed - 0 

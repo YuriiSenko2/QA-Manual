@@ -1,0 +1,346 @@
+{
+	"id": "6cc9b151-2e88-402e-859c-3dd8e5ef06bb",
+	"name": "4.CARS requests Pt. 2",
+	"timestamp": "2023-07-04T13:03:25.864Z",
+	"collection_id": "23066141-34201301-672c-432e-a229-55011f246925",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 13,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "117aca24-2231-4739-8b5a-125043bc51aa",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 746,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				746
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "5e6f4533-72b0-4c2a-a8e8-ec1e5ae73924",
+			"name": "Current user car by user car id",
+			"url": "https://qauto2.forstudy.space/api/cars/24431",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Car brand id is": true,
+				"Car Brand model is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Car brand id is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Car Brand model is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Car brand id is": true,
+					"Car Brand model is": true
+				}
+			]
+		},
+		{
+			"id": "a2f25f54-5081-4f87-b1ed-112baba91769",
+			"name": "Current user car by id (wrong user car id)",
+			"url": "https://qauto2.forstudy.space/api/cars/24432",
+			"time": 110,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "caedb739-dc7d-4942-b058-bfd127b575a1",
+			"name": "Edition of the existing car",
+			"url": "https://qauto2.forstudy.space/api/cars/24431",
+			"time": 134,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				134
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "45c2951d-f781-4e3b-92d8-a34ad09e6610",
+			"name": "Current user car by user car id",
+			"url": "https://qauto2.forstudy.space/api/cars/24431",
+			"time": 97,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Mileage is": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mileage is": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				97
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Mileage is": true
+				}
+			]
+		},
+		{
+			"id": "e9142ae9-bd1c-4172-8183-38d1777711a7",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 104,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				104
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "1232de41-4f77-4a03-a2e8-333fdfcee57b",
+			"name": "Current user cars",
+			"url": "https://qauto2.forstudy.space/api/cars",
+			"time": 102,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "3843e1d8-646a-4535-baaa-deeb85c135ac",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 591,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				591
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "d867338c-b5d5-44d4-8856-5980a3d7497b",
+			"name": "Edition of the existing car (less mileage)",
+			"url": "https://qauto2.forstudy.space/api/api/cars/24431",
+			"time": 79,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "93f541f5-1fba-4577-aad6-9ba650de8d99",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2173,
+	"collection": {
+		"requests": [
+			{
+				"id": "117aca24-2231-4739-8b5a-125043bc51aa",
+				"method": "POST"
+			},
+			{
+				"id": "5e6f4533-72b0-4c2a-a8e8-ec1e5ae73924",
+				"method": "GET"
+			},
+			{
+				"id": "a2f25f54-5081-4f87-b1ed-112baba91769",
+				"method": "GET"
+			},
+			{
+				"id": "caedb739-dc7d-4942-b058-bfd127b575a1",
+				"method": "PUT"
+			},
+			{
+				"id": "45c2951d-f781-4e3b-92d8-a34ad09e6610",
+				"method": "GET"
+			},
+			{
+				"id": "e9142ae9-bd1c-4172-8183-38d1777711a7",
+				"method": "GET"
+			},
+			{
+				"id": "1232de41-4f77-4a03-a2e8-333fdfcee57b",
+				"method": "GET"
+			},
+			{
+				"id": "3843e1d8-646a-4535-baaa-deeb85c135ac",
+				"method": "POST"
+			},
+			{
+				"id": "d867338c-b5d5-44d4-8856-5980a3d7497b",
+				"method": "PUT"
+			},
+			{
+				"id": "93f541f5-1fba-4577-aad6-9ba650de8d99",
+				"method": "GET"
+			}
+		]
+	}
+}

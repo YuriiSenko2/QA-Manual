@@ -1,0 +1,216 @@
+{
+	"id": "0774690a-b786-41a5-a975-6ea265f44eb3",
+	"name": "1. NEW USER requests",
+	"timestamp": "2023-07-04T09:53:54.789Z",
+	"collection_id": "23066141-d95b4928-1f05-44f0-9a9d-c4f0e51ae838",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 8,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "577e06d3-30a7-4d6e-95f3-1793675c8654",
+			"name": "Registration",
+			"url": "https://qauto2.forstudy.space/api/auth/signup",
+			"time": 1136,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1136
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "a4c79688-2e34-40d8-9e64-56d122b7494c",
+			"name": "Sign in",
+			"url": "https://qauto2.forstudy.space/api/auth/signin",
+			"time": 546,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				546
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "181c8751-0b3e-4c7f-ac96-224e4de6d5d4",
+			"name": "Authenticated user profile data",
+			"url": "https://qauto2.forstudy.space/api/users/profile",
+			"time": 92,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Name is": true,
+				"Last name is": true,
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Name is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Last name is": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				92
+			],
+			"allTests": [
+				{
+					"Name is": true,
+					"Last name is": true,
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "76c82efc-eb8b-4fdf-9b12-4d50a5197e37",
+			"name": "Log out",
+			"url": "https://qauto2.forstudy.space/api/auth/logout",
+			"time": 97,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				97
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "1ed29583-e05f-4bf0-a9c4-51f065b1590a",
+			"name": "Authenticated user profile data",
+			"url": "https://qauto2.forstudy.space/api/users/profile",
+			"time": 93,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				93
+			],
+			"allTests": [
+				{
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "d1a0a194-2da6-4a61-b05b-41cdc2dbff05",
+			"name": "Re-registration",
+			"url": "https://qauto2.forstudy.space/api/auth/signup",
+			"time": 82,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2046,
+	"collection": {
+		"requests": [
+			{
+				"id": "577e06d3-30a7-4d6e-95f3-1793675c8654",
+				"method": "POST"
+			},
+			{
+				"id": "a4c79688-2e34-40d8-9e64-56d122b7494c",
+				"method": "POST"
+			},
+			{
+				"id": "181c8751-0b3e-4c7f-ac96-224e4de6d5d4",
+				"method": "GET"
+			},
+			{
+				"id": "76c82efc-eb8b-4fdf-9b12-4d50a5197e37",
+				"method": "GET"
+			},
+			{
+				"id": "1ed29583-e05f-4bf0-a9c4-51f065b1590a",
+				"method": "GET"
+			},
+			{
+				"id": "d1a0a194-2da6-4a61-b05b-41cdc2dbff05",
+				"method": "POST"
+			}
+		]
+	}
+}

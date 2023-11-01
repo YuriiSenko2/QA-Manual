@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "d95b4928-1f05-44f0-9a9d-c4f0e51ae838",
+		"name": "1. NEW USER requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23066141"
+	},
+	"item": [
+		{
+			"name": "Registration*",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Yurii",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Senko",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "senko.testing1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Congrats12345",
+							"type": "text"
+						},
+						{
+							"key": "repeatPassword",
+							"value": "Congrats12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}auth/signup",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "senko.testing1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Congrats12345",
+							"type": "text"
+						},
+						{
+							"key": "remember",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}auth/signin",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticated user profile data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Name is\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Yurii\");\r",
+							"});\r",
+							"pm.test(\"Last name is\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Senko\");\r",
+							"});\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}users/profile",
+					"host": [
+						"{{url}}users"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log out",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}auth/logout",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticated user profile data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}users/profile",
+					"host": [
+						"{{url}}users"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Re-registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Yurii",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Senko",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "senko.testing1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Congrats12345",
+							"type": "text"
+						},
+						{
+							"key": "repeatPassword",
+							"value": "Congrats12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}auth/signup",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

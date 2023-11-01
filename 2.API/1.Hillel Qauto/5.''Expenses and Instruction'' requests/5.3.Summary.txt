@@ -1,0 +1,20 @@
+1) The primary aims of this collection requests are to:
+  
+  a) create the user's fuel expense
+  b) retrieve the expense data on a particular car by user car id
+  c) retrieve all instructions for a particular car model by car and model id
+  
+2) The following methods are used:
+  
+  a) Get
+  b) Post
+
+3) Test Cases:
+  
+  a) Positive
+  b) Negative
+
+4) Test run:
+  
+  a) Passed - 14
+  b) Failed - 0

@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "3f307407-86cf-4798-a141-9977d25166a6",
+		"name": "Rest_Go",
+		"description": "The collection contains the following requests:\n\n- Create a user\n- Get all users\n- Get user details\n- Update user details\n- Get user details\n- Get all user posts\n- Get all posts\n- Get a specific post\n- Get post comment\n- Create a post comment\n- Get all comments\n- Get a single comment\n- Delete a comment\n- Delete a user\n    \n\nExtras:\n\n- Add a URL as a variable to the collection\n- Add a bearerToken as a variable to the environment\n- Add the 'page' parameter for the 'Get all users' request\n- Add the 'name' parameter for the 'Get all users' request\n- Add a test for the 'Create a post comment' request: if response code = 201, then it's necessary to extract the ID and comment text from the response and add them to the environment as comment_id and comment_text respectively.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23066141"
+	},
+	"item": [
+		{
+			"name": "Create a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Derrick Rose\",\r\n  \"email\": \"d_rose1@gmail.com\",\r\n  \"gender\": \"male\",\r\n  \"status\": \"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_users}}?access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_users}}?page=&per_page=1&name=Derrick Rose&access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": ""
+						},
+						{
+							"key": "per_page",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "Derrick Rose"
+						},
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_users}}/346419?access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"path": [
+						"346419"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"D Rose\",\r\n  \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_users}}/346419?access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"path": [
+						"346419"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_users}}/346419?access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"path": [
+						"346419"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all user posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_users}}/346389/posts",
+					"host": [
+						"{{url_users}}"
+					],
+					"path": [
+						"346389",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_posts}}",
+					"host": [
+						"{{url_posts}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url_posts}}/18093",
+					"host": [
+						"{{url_posts}}"
+					],
+					"path": [
+						"18093"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_posts}}/18088/comments",
+					"host": [
+						"{{url_posts}}"
+					],
+					"path": [
+						"18088",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a post comment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"comment_id\",JSON.parse(responseBody).id);\r",
+							"pm.environment.set(\"comment_text\",JSON.parse(responseBody).body);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Derrick Rose\",\r\n  \"email\": \"d_rose1@gmail.com\",\r\n  \"body\": \"Point well taken\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_posts}}/18087/comments?access-token={{bearer-token}}",
+					"host": [
+						"{{url_posts}}"
+					],
+					"path": [
+						"18087",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_comments}}",
+					"host": [
+						"{{url_comments}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_comments}}/14034?access-token={{bearer-token}}",
+					"host": [
+						"{{url_comments}}"
+					],
+					"path": [
+						"14034"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_comments}}/14033?access-token={{bearer-token}}",
+					"host": [
+						"{{url_comments}}"
+					],
+					"path": [
+						"14033"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url_users}}/346419?access-token={{bearer-token}}",
+					"host": [
+						"{{url_users}}"
+					],
+					"path": [
+						"346419"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "url_users",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "url_posts",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "url_comments",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "492d3d6a-d227-4f67-86f6-5d151a22b2ee",
+		"name": "5.EXPENSES and INSTRUCTIONS requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23066141"
+	},
+	"item": [
+		{
+			"name": "Sign in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "senko.testing1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Congrats12345",
+							"type": "text"
+						},
+						{
+							"key": "remember",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}auth/signin",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creation of an expense",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": 24431,\r\n  \"reportedAt\": \"2022-12-04\",\r\n  \"mileage\": 126,\r\n  \"liters\": 14,\r\n  \"totalCost\": 114,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}expenses",
+					"host": [
+						"{{url}}expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all expenses by user car id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"The mileage is\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(126);\r",
+							"});\r",
+							"pm.test(\"The number of litres is\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(14);\r",
+							"});\r",
+							"pm.test(\"The total cost is\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(114);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}expenses?carId=24431&page=1",
+					"host": [
+						"{{url}}expenses"
+					],
+					"query": [
+						{
+							"key": "carId",
+							"value": "24431"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all instructions by car brand and car model id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Description for filter\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Air filter on Ford Mondeo\");\r",
+							"});\r",
+							"pm.test(\"Description for filter and oil\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Engine oil and filter on Ford Mondeo\");\r",
+							"});\r",
+							"pm.test(\"Description for brake discs\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Front brake discs on Ford Mondeo\");\r",
+							"});\r",
+							"pm.test(\"Description for brake pads\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Front brake pads on Ford Mondeo\");\r",
+							"});\r",
+							"pm.test(\"Description for coil springs\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Front coil springs on Ford Mondeo\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}instructions?carBrandId=3&carModelId=14&page=1",
+					"host": [
+						"{{url}}instructions"
+					],
+					"query": [
+						{
+							"key": "carBrandId",
+							"value": "3"
+						},
+						{
+							"key": "carModelId",
+							"value": "14"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creation of an expense (wrong date)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carId\": 24431,\r\n  \"reportedAt\": \"2023-12-04\",\r\n  \"mileage\": 132,\r\n  \"liters\": 21,\r\n  \"totalCost\": 120,\r\n  \"forceMileage\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/expenses",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log out",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}auth/logout",
+					"host": [
+						"{{url}}auth"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
