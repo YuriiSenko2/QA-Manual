@@ -1,0 +1,1 @@
+Most of the bug reports require leaving the ‘First Name’ field blank due to the impossibility of registration with this field filled in.
